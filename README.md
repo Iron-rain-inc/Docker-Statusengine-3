@@ -26,7 +26,7 @@ docker network create se
 
 `docker run -d --name se-eng --network se -p 4730:4730 -v "$(pwd)"/naemon.cfg:/opt/naemon/etc/naemon/naemon.cfg -v "$(pwd)"/config.yml:/opt/statusengine/worker/etc/config.yml -v "$(pwd)"/conf.d/:/opt/naemon/etc/naemon/conf.d ironrainindustries/se-eng:rc-01`
 
-`docker run -d -p 80:80 -p 443:443 --name se-ui -v "$(pwd)"/config.yml:/usr/share/statusengine-ui/etc/config.yml" --network se ironrainindustries/se-ui:rc-01`
+`docker run -d -p 80:80 -p 443:443 --name se-ui -v "$(pwd)"/config.yml:/usr/share/statusengine-ui/etc/config.yml --network se ironrainindustries/se-ui:rc-01`
 
 `docker exec -t se-ui /usr/share/statusengine-ui/bin/Console.php users add --username "admin" --password "admin"`
 
