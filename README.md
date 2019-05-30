@@ -18,6 +18,8 @@ There are three docker containers required to run this build of Statusengine 3.
 
 ## Standalone Launch
 
+<i>Images available at https://cloud.docker.com/repository/docker/ironrainindustries/</i>
+
 docker network create se
 
 `docker run -d -p 3306:3306 \
@@ -44,5 +46,5 @@ docker network create se
 ## Compose Launch
 TBD
 
-All credit for Statusengine to Daniel Ziegler | https://statusehttps://www.naemon.org/ngine.org 
+All credit for Statusengine to Daniel Ziegler | https://statusehttps://www.naemon.org/ngine.org <br>
 All credit for Naemon to https://www.naemon.org/
