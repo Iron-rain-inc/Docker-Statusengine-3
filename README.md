@@ -3,8 +3,7 @@
 There are three docker containers required to run this build of Statusengine 3. 
 
 <b>Database</b> - Built from the mysql:5.7 Docker image, pre-loaded with the required Statusengine 3 databases. <br>
-                  The default is non-persistent volumes but the db data can be mounted persistently if required, <br>
-                      see mysql Docker Hub for instructions.<br>
+                  The default is non-persistent volumes but the db data can be mounted persistently if required, see mysql Docker Hub for instructions.<br>
 
 <b>Engine</b> - Built form the Ubuntu 18.04 image, contains the broker module and the worker module. <br><br>
                 The broker can be mapped to a host if not using the built in Naemon via,  <br><br>
@@ -15,8 +14,7 @@ There are three docker containers required to run this build of Statusengine 3.
                 The Naemon configuration must be updated for Gearman to publish to the SQL server if not used in the same Docker network. <br><br>
                 
                 
-<b>UI</b> - Built from the Ubuntu 18.04 image, the default configuration file will look for the se-db docker container,<br>
-              this must be changed to the DB hostname if not being used on the same docker host. <br>
+<b>UI</b> - Built from the Ubuntu 18.04 image, the default configuration file will look for the se-db docker container, this must be changed to the DB hostname if not being used on the same docker host. <br>
 
 ## Standalone Launch
 
