@@ -1,0 +1,9 @@
+Add the following to the nagios.cfg | bind mount the /opt/statusengine/module to /etc/nagios/statusengine/statusengine-nagios.o
+
+broker_module=/opt/statusengine/module/statusengine-nagios.o
+
+EXAMPLE with configs
+
+broker_module=/opt/statusengine/module/statusengine-naemon-1-0-5.o use_external_command_data=0 use_system_command_data=1
+
+See https://statusengine.org/broker/#overview to configure for real system
