@@ -2,22 +2,21 @@
 
 There are three docker containers required to run this build of Statusengine 3. 
 
-<b>Database</b> - Built from the mysql:5.7 Docker image, pre-loaded with the required Statusengine 3 databases.
-                  The default is non-persistent volumes but the db data can be mounted persistently if required, 
+<b>Database</b> - Built from the mysql:5.7 Docker image, pre-loaded with the required Statusengine 3 databases. <br>
+                  The default is non-persistent volumes but the db data can be mounted persistently if required, <br>
                       see mysql Docker Hub for instructions.
 
-<b>Engine</b> - Built form the Ubuntu 18.04 image, contains the broker module and the worker module. 
-                The broker can be mapped to a host if not using the built in Naemon via,  
-                    `-v /opt/statusengine/module/statusengine-naemon-1-0-5.o:/opt/statusengine/module/statusengine-naemon-1-0-5.o` or
-                    `-v /opt/statusengine/module/statusengine-nagios.o:/opt/statusengine/module/statusengine-nagios.o`
-                The worker and Naemon configuration are stored and mounted from the hosting machine and can be updated there. 
-                The Naemon conf.d folder is also mounted from the hosting machine to allow updates. 
+<b>Engine</b> - Built form the Ubuntu 18.04 image, contains the broker module and the worker module. <br>
+                The broker can be mapped to a host if not using the built in Naemon via,  <br>
+                    `-v /opt/statusengine/module/statusengine-naemon-1-0-5.o:/opt/statusengine/module/statusengine-naemon-1-0-5.o`<br>                          or<br>
+                    `-v /opt/statusengine/module/statusengine-nagios.o:/opt/statusengine/module/statusengine-nagios.o`<br>
+                The worker and Naemon configuration are stored and mounted from the hosting machine and can be updated there. <br>
+                The Naemon conf.d folder is also mounted from the hosting machine to allow updates.                 <br>
+                The Naemon configuration must be updated for Gearman to publish to the SQL server if not used in the same Docker network. <br>
                 
-                The Naemon configuration must be updated for Gearman to publish to the SQL server if not used in the same Docker network. 
                 
-                
-<b>UI</b> - Built from the Ubuntu 18.04 image, the default configuration file will look for the se-db docker container,
-              this must be changed to the DB hostname if not being used on the same docker host. 
+<b>UI</b> - Built from the Ubuntu 18.04 image, the default configuration file will look for the se-db docker container,<br>
+              this must be changed to the DB hostname if not being used on the same docker host. <br>
 
 ## Standalone Launch
 
